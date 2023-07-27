@@ -1,0 +1,674 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* common */
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --button:22px ;
+    --head:48px;
+    --white:white;
+    --black:black;
+    --green:rgb(8, 121, 33);
+    --h3:26px;
+    --h4:24px;
+    --p:20px;
+    --img:30px;   
+}
+h1{
+    font-size: var(--head);
+    padding: 10px;
+}
+p{
+   font-size: var(--p);
+   padding: 20px 10px;
+}
+
+/* nav bar */
+nav{
+   display: flex;
+   justify-content: space-around;
+   padding:30px 30px;
+   position: fixed;
+   z-index: 9999;
+   width: 100%;
+}
+.nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(255,255,255);
+    padding: 0px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 1px 5px;
+    transition: 1s;
+}
+.nav:hover{
+    background-color: var(--white);
+    transition: 2s;
+}
+.nav img{
+    width: 150px;
+    height: inherit;
+    padding: 10px;
+    height: 70px;
+}
+.nav h2{
+    cursor: pointer;
+    padding:10px 20px; 
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;  
+}
+.nav h2:hover{
+    background-color: var(--green);
+    border-radius: 10px;
+    color: var(--white);
+    transition: 1s; 
+}
+@media screen and (min-width:950px) and (max-width:2500px){
+     .mobile{
+        display: none;
+     }
+}
+@media screen and (min-width:600px) and (max-width:950px){
+    .mobile{
+       display: none;
+    }
+    .nav{
+        display: none;  
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:600px){
+    .nav{
+        display: none;  
+    }
+    .mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 96%;
+        height: 40px;
+        background-color: rgb(255, 255, 255);
+        padding:10px 30px;
+        border-radius: 10px;
+        position: fixed;
+    }
+    .mobile img{
+        height: inherit;
+    }
+}
+@media screen and (min-width:900px) and (max-width:1800px){
+    
+}
+/* @media screen and (min-width:600px) and (max-width:900px){
+    .nav{
+        font-size: 18px;
+        
+    }
+} */
+
+/* first page */
+
+header{
+    height: 100vh;
+    background-color: var(--black);   
+    background-repeat: no-repeat;
+}
+header img {
+    height: inherit;
+    width: 100%;
+}
+@media screen and (min-width:300px) and (max-width:600px){
+    header{
+        height: 50vh;
+        background-color: var(--black);   
+        background-repeat: no-repeat;
+    }
+}
+
+/* second page code */
+.second{
+    height: inherit;
+    padding: 50px 150px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+.second h3{
+    font-size: 26px;
+    font-weight: 500;
+    padding:20px;
+}
+.second h4{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+@media screen and (min-width:300px) and (max-width:600px){
+    .second{
+        padding:3%;
+    }
+}
+@media screen and (min-width:600px) and (max-width:1200px){
+    .second{
+        padding:5%;
+    }
+}
+
+/* third page */
+
+.main_1{
+    padding: 3% 8%;
+   
+}
+.third_head{
+           width: 100%;
+}
+.third_img{
+    display: flex;
+    gap: 11px;
+    overflow:auto;  
+}
+
+.third_img div img{
+    position: relative;
+    object-fit: cover;
+    height: 400px;
+    width: 290px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+}
+.ex_1{
+    position: relative;
+    cursor: pointer;
+}
+.ex_1 h1{
+    position: absolute;
+    bottom: 0px;
+    font-size: 40px;
+}
+.ex_1 a{
+    color: white;
+}
+.ex_1 a:hover{
+    opacity: 1;
+    transition: 1s;
+    color: yellow;
+}
+@media screen and (min-width:300px) and (max-width:600px){
+    .main_1{
+        padding:3%; 
+    }
+    .third_head p{
+        width: 100%;
+        font-size: 18px;
+}
+.third_img div img{
+   max-width: 250px;
+}
+.ex_1 h1{
+    font-size: 30px;
+}  
+}
+@media screen and (min-width:600px) and (max-width:1200px){
+    .third_head p{
+        width: 100%;
+        font-size: 22px;
+}
+.main_1{
+    padding:5%; 
+}
+}
+
+/* fourth page css experiences */
+.experiences{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.experiences section:first-child{
+    width: 100%;
+}
+.experiences_img{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 20px;
+    overflow: scroll; 
+    
+}
+.experiences_img::-webkit-scrollbar{
+    display: none;
+}
+.experiences_img div{
+    width: 320px;
+    gap: 30px;
+    height: 400px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color:var(--white);
+    font-size: var(--h3);
+    transition: 3s;
+    border-radius: 10px;
+}
+.experiences_img div:hover{
+    transition: 2s;
+      padding-bottom: 30%;
+      color: yellow; 
+}
+/* background images  */
+.experiences_img1{
+    background-image: url(./4/4-1.webp);  
+}
+.experiences_img2{
+    background-image: url(./4/4-2.webp);
+}
+.experiences_img3{
+    background-image: url(./4/4-3.webp);
+}
+.experiences_img4{
+    background-image: url(./4/4-4.webp);
+}
+.experiences_img5{
+    background-image: url(./4/4-5.webp);
+}
+.experiences_img6{
+    background-image: url(./4/4-6.webp);
+}
+
+@media screen and (min-width:300px) and (max-width:600px){
+    .experiences section p{
+        width: 100%;
+        font-size: 18px;
+    }
+    .experiences_img div{
+        width: 250px;
+    }
+}
+@media screen and (min-width:600px) and (max-width:1200px){
+    .experiences section p{
+        width: 100%;
+        font-size: 22px;
+    }
+}
+/* fifth page five images */
+ 
+.fifth{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    animation-name: background-1;
+    animation-duration: 30s;
+    animation-iteration-count:infinite;  
+}
+
+@keyframes background-1{
+    0%{background: url(./5/5-1.webp) no-repeat;background-size: cover; }
+    25%{background: url(./5/5-2.webp) no-repeat;background-size: cover;}
+    50%{background: url(./5/5-3.webp) no-repeat;background-size: cover;}
+    75%{background: url(./5/5-4.webp) no-repeat;background-size: cover;}
+    100%{background: url(./5/5-5.webp) no-repeat;background-size: cover;}   
+}
+.fifth_con{
+    width: 50%;
+    height:fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: whitesmoke;
+}
+.fifth_con h1{
+     display: flex;
+     justify-content: center;
+     background-color: black;
+     color: var(--white);
+     text-align: center;
+     animation-name: head-1;
+     animation-duration: 10s;
+     animation-iteration-count:infinite; 
+}
+@keyframes head-1{
+    0%{color: var(--white);}
+    100%{color: yellow;}
+}
+.fifth_con p{
+    font-size: var(--p);
+    width: 100%;  
+}
+@media screen and (min-width:300px) and (max-width:600px)  {
+    .fifth_con{
+        width: 100%;
+        margin: 0px 5%;
+        margin-top: -300px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;     
+    }
+    .fifth_con p {
+        font-size: 18px;
+    }
+    .fifth{
+        margin-top: 350px;
+        height: 50vh;
+    }
+}
+@media screen and (min-width:600px) and (max-width:1200px)  {
+    .fifth_con{
+        width: 100%;
+        margin-top: -200px;
+        height: fit-content;
+    }
+    .fifth_con p {
+        font-size: 22px;
+    }
+    .fifth{
+        margin-top: 250px;
+    }
+}
+/* page six */
+
+.main_2{  
+    padding: 3% 8%;
+}
+.attractions_head{
+    width: 100%;
+}
+.attractions_img{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-grow: ; */
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;  
+}
+.ad_img6,.ad_img1 {
+    width: 500px;
+    transition: 2s;
+    height: 100%;
+}
+.ad_img2,.ad_img3,.ad_img4,.ad_img5{
+    width: 250px;
+    transition: 2s;
+}
+.ad1{
+    height:320px;
+    width:500px ;
+    overflow: hidden;
+}
+.ad2{
+    height:320px;
+    width:250px ;
+    overflow: hidden;
+}
+.attractions_img img{
+      width: inherit;
+      height: inherit;
+}
+.attractions_img div img:hover{
+    transform: scale(1.2);
+    transition: 2s;
+    cursor: pointer;   
+}
+.attractions_img div:hover{
+    transition: 2s;
+    cursor: pointer;   
+}
+.attractions_img div{
+    position: relative;  
+}
+.attractions_img h1{
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    color: var(--white);
+    font-size: 40px;
+}
+@media screen and (min-width:300px) and (max-width:600px) {
+    .main_2{
+        padding: 3%;
+    }
+    .attractions_img h1{
+           font-size: 30px;
+    }
+    .attractions_img{
+        width: inherit;
+    }  
+    .attractions_head p{
+        width: 100%;
+        font-size: 18px;
+    }
+    .ad1{
+        width:100% ;
+    }
+    .ad2{
+        width: 100%;
+    } 
+}
+@media screen and (min-width:600px) and (max-width:1200px) {
+    .main_2{
+        padding: 5%;
+    }
+    .attractions_head p{
+        width: 100%;
+        font-size: 22px;
+    }
+    .ad1{
+        width:64% ;
+    }
+    .ad2{
+        width: 32%;
+    }
+    .attractions_img img{
+        width: 100%;
+        height: 100%;
+  }
+}
+
+/* seventh page */
+.seven{
+    /* height: 100vh; */
+    padding: 3% 8%;
+    background-color: whitesmoke;
+}
+.eat img{
+    width: 100%;
+    border-radius: 20px;
+}
+.seven div h2{
+    font-size: var(--img);
+}
+.eat{
+    position: relative;
+    top: 0px;   
+}
+.eat img{
+    position: relative;
+    background-color: var(--black);
+    transition: 1s;
+}
+.eat .ate{
+    position: absolute;
+    top:120px;
+    left: 60px;
+    color: var(--white);
+}
+.eat :hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.eat img:hover{
+    opacity: 0.8;
+    filter: brightness(30%);
+    transition: 1s;
+}
+@media screen and (min-width:300px) and (max-width:600px){
+    .seven{
+        padding: 3%;
+    }
+    .seven div p{
+        width: 100%;
+    }
+    .eat .ate{
+        position: absolute;
+        top:20px;
+        left: 10px;
+    }
+    .eat img{
+        height: 250px;
+    }
+}
+@media screen and (min-width:600px) and (max-width:1200px){
+    .seven{
+        padding: 5%;
+    }
+    .seven div p{
+        width: 100%;
+    }
+    .eat .ate{
+        position: absolute;
+        top:60px;
+        left: 30px;
+    }
+}
+/* eighth page */
+.main_3{
+     padding: 3% 8%;
+}
+.planh1,p{
+    width: 50%;
+}
+/* .plan{
+    overflow-x: scroll;
+} */
+.plan_img img{
+    height: 100%;
+    width: 100%; 
+}
+.plan_img{
+    position: relative;
+    cursor: pointer;
+    width: 320px;
+    height: 400px;
+    color: var(--white);   
+}
+.plan_img h2{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    font-size: var(--img);
+}
+.plan_div{
+     /* overflow: scroll; */
+     display: flex;
+    gap: 20px;
+}
+/* .plan::-webkit-scrollbar{
+    display: none;
+} */
+@media screen and (min-width:300px) and (max-width:600px){
+.main_3{
+    padding: 3%;
+}
+.plan_img p{
+      width: 100%;
+}
+.plan h1{
+    text-align: center;
+}
+.plan p{
+    width: 100%;
+    font-size: 18px;
+}
+.plan_div{
+    display: flex;
+    flex-direction: column;
+}
+.plan_img{
+    width: 100%;
+}
+.plan_img img{
+    width: 100%;
+}
+.plan_img h2{
+    font-size: 30px;
+}
+}
+@media screen and (min-width:600px) and (max-width:1200px){
+    .main_3{
+        padding: 5%;
+    }
+    .plan p{
+        width: 100%;
+  }
+    .plan_div{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+    .plan_img{
+        width: 48%;
+    }
+    .plan_img h2{
+        font-size:26px;
+    }
+}
+/* ninth page */
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 3% 8%;
+    background-color: var(--black);
+    color: rgb(168, 155, 155);
+}
+footer h2{
+    padding: 30px 50px;
+    font-size: 20px;
+}
+footer h3{
+    padding: 30px 250px;
+    font-size: 18px;
+}
+.icons i{
+    font-size: 26px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: aliceblue;
+}
+.icons i:hover{
+    background-color: whitesmoke;
+    color: rgb(5, 41, 245);
+}
+
+@media screen and (min-width:300px) and (max-width:600px){
+
+    footer h2{
+        padding: 3%;
+        font-size: 20px;
+        padding: 40px 0px;
+    }
+    footer h3{
+        padding: 4%;
+        font-size: 18px;
+        padding: 40px 0px;
+    }
+    body h1{
+        font-size: 38px;
+    }
+}
+@media screen and (min-width:600px) and (max-width:1200px){
+    footer h2{
+        padding: 3%;
+    }
+    footer h3{
+        padding: 4%;
+    }
+}
